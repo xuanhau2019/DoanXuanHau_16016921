@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="INSERT QUERY DATABASE"
+        android:id="@+id/mnInsertQuery" />
+    <item
+        android:title="CRUD LISTVIEW"
+        android:id="@+id/mnAdd" />
+    <item
+        android:title="SEACH GRIDVIEW"
+        android:id="@+id/mnSearch" />
+</menu>

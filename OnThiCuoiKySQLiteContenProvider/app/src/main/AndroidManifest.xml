@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.onthicuoikysqlitecontenprovider">
+
+
+    <permission
+        android:name="com.example.onthicuoikysqlitecontenprovider.READ_DATABASE"
+        android:label="Read database"
+        android:protectionLevel="normal"></permission>
+    <permission
+        android:name="com.example.onthicuoikysqlitecontenprovider.WRITE_DATABASE"
+        android:label="Write database"
+        android:protectionLevel="normal"></permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name=".MyContentProvider"
+            android:authorities="com.example.onthicuoikysqlitecontenprovider"
+            android:enabled="true"
+            android:exported="true"
+            android:readPermission="com.example.onthicuoikysqlitecontenprovider.READ_DATABASE"
+            android:writePermission="com.example.onthicuoikysqlitecontenprovider.WRITE_DATABASE"></provider>
+
+        <activity android:name=".InsertQuery" />
+        <activity android:name=".EmployeeDisplayActivity" />
+        <activity android:name=".EmployeeActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
